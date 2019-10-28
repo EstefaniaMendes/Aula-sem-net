@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="vieport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+	.fufu {
+	color: red;
+	background: skyblue;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	width: min-content;
+}
+
+</style>
+</head>
+<body>
+ <form onsubmit="init(event)">
+ 	<input 
+ 	type="text" 
+ 	required 
+ 	autofocus
+ 	placeholder="SEM NET...."
+ 	>
+ </form>
+ <h1 class="fufu"> Aula sem net</h1>
+ <script>
+	function init(event) {
+		event.preventDefault();
+		let valor = document.querySelector('input').value;
+
+		document.querySelector('h1').innerHTML = valor;
+		document.querySelector('h1').style.color = 'purple'
+	}
+ </script>
+</body>
+</html>
